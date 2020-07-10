@@ -21,7 +21,7 @@
   }
   &__current-user{
     color: white;
-    width: 200px;
+    width: 300px;
     height: 70px;
     margin-right: 20px;
     display: flex;
@@ -64,12 +64,15 @@
       display: flex;
       align-items: center;
       border-radius: 4px;
-      &__group-name{
-        padding-left: 30px;
+      a{
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 20px;
         font-weight: bold;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-left: 30px;
+        text-decoration: none;
       }
+      
     }
   }
 }

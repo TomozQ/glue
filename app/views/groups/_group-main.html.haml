@@ -1,6 +1,6 @@
 .head
   .head__title
-    Group一覧
+    Group index
   .head__current-user
     .head__current-user__name
       = current_user.name
@@ -12,30 +12,9 @@
 
 .group-list
   .group-list__contents
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup1
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup2
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup3
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup4
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup5
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup6
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup7
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup8
-    .group-list__contents__content
-      .group-list__contents__content__group-name
-        testGroup9
+    - current_user.groups.each do |group|
+      .group-list__contents__content
+        = link_to '#' do
+          .group-list__contents__content__group-name
+            =group.name
+              
