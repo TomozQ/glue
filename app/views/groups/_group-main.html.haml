@@ -1,6 +1,15 @@
 .head
   .head__title
     Group一覧
+  .head__current-user
+    .head__current-user__name
+      = current_user.name
+    .head__current-user__edit
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog')
+      = link_to new_group_path(current_user) do
+        = icon('fas', 'door-open')
+
 .group-list
   .group-list__contents
     .group-list__contents__content
