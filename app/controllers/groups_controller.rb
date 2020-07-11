@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    groups = Group.all
+    groups = Group.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -28,6 +28,10 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+
   end
 
 
