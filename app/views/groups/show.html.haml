@@ -1,0 +1,17 @@
+.head
+  .head__title
+    = @group.name
+  .head__current-user
+    .head__current-user__name
+      = current_user.name
+    .head__current-user__edit
+      = link_to edit_group_path(params[:id]) do
+        = icon('fas', 'drafting-compass')
+      =link_to '#' do
+        = icon('fas', 'shopping-cart')
+      = link_to groups_path(current_user) do
+        = icon('fas', 'door-open')
+
+.show-lists
+  = render 'side-bar'
+  = render 'chat-main'
