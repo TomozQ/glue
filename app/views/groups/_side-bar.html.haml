@@ -1,0 +1,8 @@
+.side-bar
+  .side-bar__contents
+    - @group.users.each do |user|
+      .side-bar__contents__content
+        =link_to '#' do
+          .side-bar__contents__content__member-name
+            =user.name
+    
