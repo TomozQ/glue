@@ -50,6 +50,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: image-url("//public/backgrond-images/315222_s.jpg");
+  background-size: cover;
+  height: calc(100vh - 100px);
   &__contents{
     background-color: #CCCCCC;
     width: 600px;
@@ -57,6 +60,8 @@
     overflow: scroll;
     margin-top: 30px;
     margin-bottom: 30px;
+    background: rgba(45,45,45, 0.4);
+    border-radius: 4px;
     &__content{
       background-color: white;
       width: 90%;
@@ -66,6 +71,7 @@
       align-items: center;
       border-radius: 4px;
       box-shadow: 2px 4px black;
+      opacity: 1;
       a{
         color: black;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -128,13 +134,13 @@
     background-image: image-url("//public/backgrond-images/glue_groupMessage_backgroundImage.jpg");
     background-size: cover;
     height: calc(100% - 90px);
-    width: 100%;
+    width: calc(100vw - 300px);
     display: flex;
     justify-content: center;
+    overflow: scroll;
     &__contents{
-      height: 100%;
+      height: 95%;
       width: 80%;
-      overflow: scroll;
       display: flex;
       flex-direction: column;
       margin-top: 10px;
@@ -145,10 +151,12 @@
         justify-content: space-between;
         margin: 5px;
         box-shadow: 2px 2px black;
+        word-break: break-all;
         &__left{
           padding-left: 5px;
+          width: 78%;
           &__name{
-            font-size: 20px;
+            font-size: 25px;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             letter-spacing: 1px;
           }
@@ -176,40 +184,53 @@
     background-color: #EEEEEE;
     display: flex;
     justify-content: center;
-    &__contents{
+    form{
       width: 90%;
       height: 100%;
+    }
+    &__contents{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
       &__input-space{
-        position: relative;
+        width: 700px;
+        height: 60px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         input{
-          height: 60px;
-          width: 870px;
+          padding-left: 10px;
+          height: 100%;
+          width: 100%;
+          word-break: break-all;
         }
-        label{
+        &__label{
           position: absolute;
-          top: 10px;
-          left: 800px;
+          left: 1110px;
           i{
             font-size: 40px;
-            font-weight: lighter;
+            
+          }
+          &__hidden{
+
+            input{
+              display: none;
+            }
           }
         }
       }
       &__btn-box{
-        background-color: #2C7CFF;
-        a{
-          line-height: 60px;
-          text-decoration: none;
-          color: #FFFF66;
-          padding: 0 30px;
-          font-size: 30px;
+        margin-top: 15px;
+        input{
+          color: yellow;
+          line-height: 58px;
+          background-color: cornflowerblue;
+          padding: 0 20px;
+          margin-left: 20px;
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          letter-spacing: 1px;
         }
       }
+      
     }
-  }
+    }
 }
