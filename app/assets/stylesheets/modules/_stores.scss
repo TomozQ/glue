@@ -1,0 +1,119 @@
+.store-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: image-url("//public/backgrond-images/2060028_s.jpg");
+  background-size: cover;
+  height: calc(100vh - 100px);
+  &__contents{
+    width: 600px;
+    height: 100%;
+    overflow: scroll;
+    background: rgba(45,45,45, 0);
+    &__content{
+      background-color: white;
+      width: 90%;
+      height: 70px;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      box-shadow: 2px 4px black;
+      opacity: 1;
+      a{
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+    }
+  }
+}
+
+.middle{
+  height: 80px;
+  width: 100vw;
+  &__contents{
+    width: 800px;
+    height: 100%;
+    margin-left: 20px;
+    &__label{
+      font-size: 40px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      span{
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.show-main{
+  width: 100%;
+  height: calc(100vh - 100px - 80px);
+  display: flex;
+  justify-content: center;
+  &__wrapper{
+    margin-top: 10px;
+    width: 95%;
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+      background:#FFF;
+      margin: 10px;
+      word-break: break-all;
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: 200px;
+      p{
+        position:relative;
+        top:10px;
+        padding-left: 30px;
+        padding-right: 10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      .user-name{
+        font-size: 20px;
+      }
+      .inform{
+        font-size: 30px;
+      }
+      .time-stamp{
+        font-size: 15px;
+      }
+    }
+    .effect{
+      position: relative;
+      background-color: blanchedalmond;
+    }
+    .effect::before{
+      z-index: -1;
+      position: absolute;
+      content: "";
+      bottom: 15px;
+      right: 10px;
+      left: auto;
+      width: 50%;
+      top: 80%;
+      max-width:300px;
+      background: #777;
+      -webkit-box-shadow: 0 15px 10px #777;
+      -moz-box-shadow: 0 15px 10px #777;
+      box-shadow: 0 15px 10px #777;
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+  }
+}
+
+
+

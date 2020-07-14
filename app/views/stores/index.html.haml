@@ -1,0 +1,19 @@
+.head
+  .head__title
+    Store index
+  .head__current-user
+    .head__current-user__name
+      = current_user.name
+    .head__current-user__edit
+      = link_to new_group_store_path do
+        = icon('fas', 'marker')
+      = link_to group_path(params[:group_id]) do
+        = icon('fas', 'door-open')
+
+.store-list
+  .store-list__contents
+    - @group.stores.each do |store|
+      .store-list__contents__content
+        = link_to group_store_path(params[:group_id], store.id) do
+          .store-list__contents__content__group-name
+            =store.name
