@@ -1,0 +1,18 @@
+.head
+  .head__title
+    Add New Store!
+  .head__current-user
+    .head__current-user__name
+      = current_user.name
+    .head__current-user__edit
+      = link_to group_stores_path(params[:group_id]) do
+        = icon('fas', 'door-open')
+
+.new-main
+  .new-main__add-form
+    = form_with model: [@group, @store], html: {class: ".new-main__add-form"}, local: true do |f|
+      .new-main__add-form__contents
+        .new-main__add-form__contents__input-space
+          = f.text_field :name, class: '.new-main__add-form__contents__input-space', placeholder: 'Store Name'
+        .new-main__add-form__contents__btn-box
+          = f.submit 'Add', class: '.new-main__add-form__contents__input-space__btn-box__Send'
