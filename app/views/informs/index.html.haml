@@ -5,7 +5,7 @@
     .head__current-user__name
       = current_user.name
     .head__current-user__edit
-      = link_to group_stores_path(params[:group_id], @store.id) do
+      = link_to group_stores_path(params[:group_id], params[:store_id]) do
         = icon('fas', 'door-open')
 
 .middle

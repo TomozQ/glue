@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 2020_07_15_074017) do
 
   create_table "informs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
-    t.bigint "store_id"
+    t.bigint "group_id"
     t.bigint "user_id"
+    t.bigint "store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_informs_on_group_id"
     t.index ["store_id"], name: "index_informs_on_store_id"
     t.index ["user_id"], name: "index_informs_on_user_id"
   end
@@ -82,6 +84,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_074017) do
 
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
+  add_foreign_key "informs", "groups"
   add_foreign_key "informs", "stores"
   add_foreign_key "informs", "users"
   add_foreign_key "messages", "groups"

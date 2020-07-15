@@ -9,7 +9,7 @@ class InformsController < ApplicationController
   def create
     @inform = @store.informs.new(inform_params)
     if @inform.save
-      redirect_to group_store_informs_path(@store), notice: 'Puts a Sticky note successfully'
+      redirect_to group_store_informs_path(params[:group_id], @store), notice: 'Puts a Sticky note successfully'
     else
       @informs = @store.informs.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -21,8 +21,9 @@ end
 
 private
 def inform_params
-  params.permit(:content, :store_id).merge(user_id: current_user.id)
+  params.permit(:content, :store_id).merge(user_id: current_user.id, group_id: params[:group_id])
 end
+
 
 def set_store
   @store = Store.find(params[:store_id])
