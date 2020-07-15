@@ -1,0 +1,37 @@
+.head
+  .head__title
+    Information, News, Here!
+  .head__current-user
+    .head__current-user__name
+      = current_user.name
+    .head__current-user__edit
+      = link_to group_stores_path(params[:group_id], @store.id) do
+        = icon('fas', 'door-open')
+
+.middle
+  .middle__contents
+    .middle__contents__label
+      Regarding
+      %span= @store.name
+      ・・・
+  
+.show-main
+  .show-main__wrapper
+    - @informs.each do |inform|
+      %div(class = "box effect")
+        %p(class = "user-name") 
+          = inform.user.name
+        %p(class = "inform")
+          = inform.content
+        %p(class = "time-stamp") 
+          = inform.created_at
+      
+.create
+  .create__main
+    .create__main__add-form
+      = form_with url: group_store_informs_path, html: {class: ".create__main__add-form"}, local: true do |f|
+        .create__main__add-form__contents
+          .create__main__add-form__contents__input-space
+            = f.text_field :content, class: '.create__main__add-form__contents__input-space', placeholder: 'inform'
+          .create__main__add-form__contents__btn-box
+            = f.submit 'PUT!!', class: '.create__main__add-form__contents__input-space__btn-box__Send'

@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :store_users
   has_many :stores, through: :store_users
+  has_many :informs
 
   validates :name, presence: true, uniqueness: true
 end

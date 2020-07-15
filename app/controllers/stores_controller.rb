@@ -2,7 +2,6 @@ class StoresController < ApplicationController
   before_action :set_group
 
   def index
-    @group = Group.find(params[:group_id])
     @stores = @group.stores.includes(:user)
     @users = @group.users.all
   end
