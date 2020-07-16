@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = @group.messages.includes(:user)
+    @messages = @group.messages.includes(:user).order("created_at DESC")
     redirect_to group_path(params[:group_id])
   end
 
