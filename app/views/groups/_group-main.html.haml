@@ -14,6 +14,6 @@
   .group-list__contents
     - current_user.groups.each do |group|
       .group-list__contents__content
-        = link_to group_path(group.id) do
+        = link_to group_messages_path(group.id) do
           .group-list__contents__content__group-name
             =group.name
