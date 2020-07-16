@@ -14,6 +14,6 @@
   .store-list__contents
     - @group.stores.each do |store|
       .store-list__contents__content
-        = link_to group_store_path(params[:group_id], store.id) do
+        = link_to group_store_informs_path(params[:group_id], store.id) do
           .store-list__contents__content__group-name
-            =store.name
+            = store.name

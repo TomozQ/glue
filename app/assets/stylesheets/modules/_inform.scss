@@ -1,0 +1,49 @@
+.create{
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: image-url("//public/backgrond-images/3413354_s.jpg");
+  &__main{
+    width: 400px;
+    height: 200px;
+    background-image: image-url("//public/backgrond-images/create_inform_background.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__add-form{
+
+      
+      &__contents{
+
+        &__input-space{
+          
+          input{
+            height: 50px;
+            width: 300px;
+            background: rgba(45,45,45, 0.4);
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 1px;
+          }
+        }
+        &__btn-box{
+          text-align: center;
+          margin-top: 15px;
+          input{
+            line-height: 40px;
+            background-color: #FFFAFA;
+            padding: 0 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 1px;
+            box-shadow: 2px 4px black;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
