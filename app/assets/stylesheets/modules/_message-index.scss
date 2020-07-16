@@ -1,0 +1,170 @@
+.show-lists{
+  display: flex;
+  &__side-bar{
+    height: calc(100vh - 100px);
+    width: 300px;
+    background-color: #999999;
+    overflow: scroll;
+    border-right: 1px solid black;
+    &__contents{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      &__content{
+        width: 90%;
+        height: 50px;
+        background-color: #222222;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        box-shadow: 4px 4px black;
+        opacity: 0.9;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          letter-spacing: 1px;
+          font-size: 20px;
+        }
+        a:hover{
+          color: #FF0066;
+        }
+        
+      }
+    }
+  }
+  &__chat-main{
+    height: calc(100vh - 100px);
+    width: calc(100vw - 300px);
+    &__message-lists{
+      background-image: image-url("//public/backgrond-images/glue_groupMessage_backgroundImage.jpg");
+      background-size: cover;
+      height: calc(100% - 90px);
+      width: calc(100vw - 300px);
+      display: flex;
+      justify-content: center;
+      overflow: scroll;
+      &__contents{
+        height: 95%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        &__content{
+          position: relative;
+          margin: 2em 0 2em 40px;
+          padding: 15px;
+          background: #FFFFAA;
+          border-radius: 30px;
+          display: flex;
+          justify-content: space-between;
+          word-break: break-all;
+          &__left{
+            padding-left: 5px;
+            width: 75%;
+            &__name{
+              font-size: 25px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              letter-spacing: 1px;
+            }
+            &__text{
+              font-size: 25px;
+            }
+          }
+          &__right{
+            display: flex;
+            align-items: flex-end;
+            padding-right: 10px;
+            &__time-stamp{
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+          }
+        }
+        &__content:before{
+          content: "";
+          position: absolute;
+          left: -38px;
+          width: 13px;
+          height: 12px;
+          bottom: 0;
+          background: #FFFFAA;
+          border-radius: 50%;
+        }
+        &__content:after{
+          content: "";
+          position: absolute;
+          left: -24px;
+          width: 20px;
+          height: 18px;
+          bottom: 3px;
+          background: #FFFFAA;
+          border-radius: 50%;
+        }
+
+      }
+    }
+    &__message-form{
+      height: 90px;
+      width: 100%;
+      background-color: #EEEEEE;
+      display: flex;
+      justify-content: center;
+      form{
+        width: 90%;
+        height: 100%;
+      }
+      &__contents{
+        display: flex;
+        justify-content: center;
+        &__input-space{
+          width: 700px;
+          height: 60px;
+          margin-top: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input{
+            padding-left: 10px;
+            height: 100%;
+            width: 100%;
+            word-break: break-all;
+          }
+          &__label{
+            position: absolute;
+            left: 1110px;
+            i{
+              font-size: 40px;
+              
+            }
+            &__hidden{
+  
+              input{
+                display: none;
+              }
+            }
+          }
+        }
+        &__btn-box{
+          margin-top: 15px;
+          input{
+            color: yellow;
+            line-height: 58px;
+            background-color: cornflowerblue;
+            padding: 0 20px;
+            margin-left: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          }
+        }
+        
+      }
+      }
+  }
+  
+}
+
+
+
+
