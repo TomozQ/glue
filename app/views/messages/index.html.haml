@@ -1,3 +1,4 @@
+= javascript_include_tag 'autoReload'
 .head
   .head__title
     = @group.name
@@ -25,7 +26,7 @@
     .show-lists__chat-main__message-lists
       .show-lists__chat-main__message-lists__contents
         - @group.messages.each do |message|
-          .show-lists__chat-main__message-lists__contents__content
+          .show-lists__chat-main__message-lists__contents__content{data: {message: {id: message.id}}}
             .show-lists__chat-main__message-lists__contents__content__left
               .show-lists__chat-main__message-lists__contents__content__left__name
                 = message.user.name
