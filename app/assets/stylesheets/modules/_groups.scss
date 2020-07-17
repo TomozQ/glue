@@ -127,113 +127,113 @@
   }
 }
 
-.chat-main{
-  height: calc(100vh - 100px);
-  width: calc(100vw - 300px);
-  &__message-lists{
-    background-image: image-url("//public/backgrond-images/glue_groupMessage_backgroundImage.jpg");
-    background-size: cover;
-    height: calc(100% - 90px);
-    width: calc(100vw - 300px);
-    display: flex;
-    justify-content: center;
-    overflow: scroll;
-    &__contents{
-      height: 95%;
-      width: 80%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 10px;
-      &__content{
-        background-color: white;
-        border: 1px solid black;
-        display: flex;
-        justify-content: space-between;
-        margin: 5px;
-        box-shadow: 2px 2px black;
-        word-break: break-all;
-        &__left{
-          padding-left: 5px;
-          width: 78%;
-          &__name{
-            font-size: 25px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            letter-spacing: 1px;
-          }
-          &__text{
-            font-size: 25px;
-          }
-        }
-        &__right{
-          display: flex;
-          align-items: flex-end;
-          padding-right: 10px;
-          &__time-stamp{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          }
-        }
-      }
-      &__content + &__content{
-        border-top: none;
-      }
-    }
-  }
-  &__message-form{
-    height: 90px;
-    width: 100%;
-    background-color: #EEEEEE;
-    display: flex;
-    justify-content: center;
-    form{
-      width: 90%;
-      height: 100%;
-    }
-    &__contents{
-      display: flex;
-      justify-content: center;
-      &__input-space{
-        width: 700px;
-        height: 60px;
-        margin-top: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        input{
-          padding-left: 10px;
-          height: 100%;
-          width: 100%;
-          word-break: break-all;
-        }
-        &__label{
-          position: absolute;
-          left: 1110px;
-          i{
-            font-size: 40px;
+// .chat-main{
+//   height: calc(100vh - 100px);
+//   width: calc(100vw - 300px);
+//   &__message-lists{
+//     background-image: image-url("//public/backgrond-images/glue_groupMessage_backgroundImage.jpg");
+//     background-size: cover;
+//     height: calc(100% - 90px);
+//     width: calc(100vw - 300px);
+//     display: flex;
+//     justify-content: center;
+//     overflow: scroll;
+//     &__contents{
+//       height: 95%;
+//       width: 80%;
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 10px;
+//       &__content{
+//         background-color: white;
+//         border: 1px solid black;
+//         display: flex;
+//         justify-content: space-between;
+//         margin: 5px;
+//         box-shadow: 2px 2px black;
+//         word-break: break-all;
+//         &__left{
+//           padding-left: 5px;
+//           width: 78%;
+//           &__name{
+//             font-size: 25px;
+//             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+//             letter-spacing: 1px;
+//           }
+//           &__text{
+//             font-size: 25px;
+//           }
+//         }
+//         &__right{
+//           display: flex;
+//           align-items: flex-end;
+//           padding-right: 10px;
+//           &__time-stamp{
+//             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+//           }
+//         }
+//       }
+//       &__content + &__content{
+//         border-top: none;
+//       }
+//     }
+//   }
+//   &__message-form{
+//     height: 90px;
+//     width: 100%;
+//     background-color: #EEEEEE;
+//     display: flex;
+//     justify-content: center;
+//     form{
+//       width: 90%;
+//       height: 100%;
+//     }
+//     &__contents{
+//       display: flex;
+//       justify-content: center;
+//       &__input-space{
+//         width: 700px;
+//         height: 60px;
+//         margin-top: 15px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         input{
+//           padding-left: 10px;
+//           height: 100%;
+//           width: 100%;
+//           word-break: break-all;
+//         }
+//         &__label{
+//           position: absolute;
+//           left: 1110px;
+//           i{
+//             font-size: 40px;
             
-          }
-          &__hidden{
+//           }
+//           &__hidden{
 
-            input{
-              display: none;
-            }
-          }
-        }
-      }
-      &__btn-box{
-        margin-top: 15px;
-        input{
-          color: yellow;
-          line-height: 58px;
-          background-color: cornflowerblue;
-          padding: 0 20px;
-          margin-left: 20px;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-      }
+//             input{
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//       &__btn-box{
+//         margin-top: 15px;
+//         input{
+//           color: yellow;
+//           line-height: 58px;
+//           background-color: cornflowerblue;
+//           padding: 0 20px;
+//           margin-left: 20px;
+//           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+//         }
+//       }
       
-    }
-    }
-}
+//     }
+//     }
+// }
 
 .new-main{
   width: 100vw;

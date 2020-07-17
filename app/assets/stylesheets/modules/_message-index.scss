@@ -57,7 +57,7 @@
           position: relative;
           margin: 2em 0 2em 40px;
           padding: 15px;
-          background: #FFFFAA;
+          background: #C2EEFF;
           border-radius: 30px;
           display: flex;
           justify-content: space-between;
@@ -90,7 +90,7 @@
           width: 13px;
           height: 12px;
           bottom: 0;
-          background: #FFFFAA;
+          background: #C2EEFF;
           border-radius: 50%;
         }
         &__content:after{
@@ -100,67 +100,51 @@
           width: 20px;
           height: 18px;
           bottom: 3px;
-          background: #FFFFAA;
+          background: #C2EEFF;
           border-radius: 50%;
         }
-
-      }
-    }
-    &__message-form{
-      height: 90px;
-      width: 100%;
-      background-color: #EEEEEE;
-      display: flex;
-      justify-content: center;
-      form{
-        width: 90%;
-        height: 100%;
-      }
-      &__contents{
-        display: flex;
-        justify-content: center;
-        &__input-space{
-          width: 700px;
-          height: 60px;
-          margin-top: 15px;
+        &__content1{
+          position: relative;
+          margin: 2em 0 2em 40px;
+          padding: 15px;
+          background: white;
+          border-radius: 4px;
           display: flex;
-          align-items: center;
           justify-content: space-between;
-          input{
-            padding-left: 10px;
-            height: 100%;
-            width: 100%;
-            word-break: break-all;
-          }
-          &__label{
-            position: absolute;
-            left: 1110px;
-            i{
-              font-size: 40px;
-              
+          word-break: break-all;
+          box-shadow: 2px 4px 4px black;
+          width: 500px;
+          &__left{
+            padding-left: 5px;
+            width: 75%;
+            &__name{
+              font-size: 25px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              letter-spacing: 1px;
             }
-            &__hidden{
-  
-              input{
-                display: none;
-              }
+            &__store-name{
+              font-size: 15px;
+              background-color: #FFFFBB;
+            }
+            &__text{
+              font-size: 25px;
             }
           }
-        }
-        &__btn-box{
-          margin-top: 15px;
-          input{
-            color: yellow;
-            line-height: 58px;
-            background-color: cornflowerblue;
-            padding: 0 20px;
-            margin-left: 20px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          &__right{
+            display: flex;
+            align-items: flex-end;
+            padding-right: 10px;
+            &__time-stamp{
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
           }
         }
         
+        
       }
-      }
+      
+    }
+    
   }
   
 }
@@ -168,3 +152,64 @@
 
 
 
+.chat-main{
+  margin-left: 300px;
+  width: calc(100vw - 300px);
+  height: 90px;
+  margin-top: -90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAFAD2;
+  &__message-form{
+    width: 90%;
+    height: 60px;
+    &__Form{
+      display: flex;
+      justify-content: center;
+      &__contents{
+        display: flex;
+        position: relative;
+        &__message{
+          height: 60px;
+          width: 800px;
+          padding-left: 10px;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          letter-spacing: 1px;
+          border-radius: 4px;
+        }
+        &__imgbox{
+          position: absolute;
+          right: 10px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          &__label{
+
+            &__icon{
+              font-size: 40px;
+            }
+            &__file-field{
+              display: none;
+            }
+            
+          }
+        }
+      }
+      &__btn-send{
+        padding: 0 20px;
+        margin-left: 30px;
+        background-color: #5D99FF;
+        cursor: pointer;
+        color: #FFFF88;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 10px;
+      }
+      &__btn-send:hover{
+        box-shadow: 1px 2px 2px black;
+      }
+    }
+  }
+}
