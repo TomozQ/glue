@@ -103,8 +103,46 @@
           background: #C2EEFF;
           border-radius: 50%;
         }
-
+        &__content1{
+          position: relative;
+          margin: 2em 0 2em 40px;
+          padding: 15px;
+          background: white;
+          border-radius: 4px;
+          display: flex;
+          justify-content: space-between;
+          word-break: break-all;
+          box-shadow: 2px 4px 4px black;
+          width: 500px;
+          &__left{
+            padding-left: 5px;
+            width: 75%;
+            &__name{
+              font-size: 25px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              letter-spacing: 1px;
+            }
+            &__store-name{
+              font-size: 15px;
+              background-color: #FFFFBB;
+            }
+            &__text{
+              font-size: 25px;
+            }
+          }
+          &__right{
+            display: flex;
+            align-items: flex-end;
+            padding-right: 10px;
+            &__time-stamp{
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+          }
+        }
+        
+        
       }
+      
     }
     
   }

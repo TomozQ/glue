@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user).order("created_at DESC")
-    @informs = Inform.where(params[:group_id])
+    @informs = Inform.where(group_id: params[:group_id])
   end
 
   def create
