@@ -9,7 +9,7 @@
         = icon('fas', 'drafting-compass')
       =link_to group_stores_path(params[:group_id]) do
         = icon('fas', 'shopping-cart')
-      = link_to groups_path(current_user) do
+      = link_to groups_path do
         = icon('fas', 'door-open')
 
 .show-lists
@@ -34,17 +34,38 @@
                 = image_tag message.image.url, class: '.show-lists__chat-main__message-lists__contents__content__left__text__img' if message.image.present?
             .show-lists__chat-main__message-lists__contents__content__right
               .show-lists__chat-main__message-lists__contents__content__right__time-stamp
-                = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    
-    .show-lists__chat-main__message-form
-      = form_with model: [@group, @message], html: {class: ".show-lists__chat-main__message-form"}, local: true do |f|
-        .show-lists__chat-main__message-form__contents
-          .show-lists__chat-main__message-form__contents__input-space
-            = f.text_field :content, class: '.show-lists__chat-main__message-form__contents__input-space', placeholder: 'type a message'
-            .show-lists__chat-main__message-form__contents__input-space__label
-              = f.label :image, class: '.show-lists__chat-main__message-form__contents__input-space__label' do
-                =icon('far', 'image')
-                .show-lists__chat-main__message-form__contents__input-space__label__hidden
-                  = f.file_field :image, class: '.show-lists__chat-main__message-form__contents__input-space__label__hidden'
-          .show-lists__chat-main__message-form__contents__btn-box
-            = f.submit 'Send', class: '.show-lists__chat-main__message-form__contents__input-space__btn-box__Send'
+                = message.created_at
+        -if @informs
+          - @informs.each do |inform|
+            .show-lists__chat-main__message-lists__contents__content
+              .show-lists__chat-main__message-lists__contents__content__left
+                .show-lists__chat-main__message-lists__contents__content__left__name
+                  = inform.user.name
+                .show-lists__chat-main__message-lists__contents__content__left__text
+                  = inform.content
+              .show-lists__chat-main__message-lists__contents__content__right
+                .show-lists__chat-main__message-lists__contents__content__right__time-stamp
+                  = inform.created_at
+      
+    -# .show-lists__chat-main__message-form
+    -#   = form_with model: [@group, @message], html: {class: ".show-lists__chat-main__message-form"}, local: true do |f|
+    -#     .show-lists__chat-main__message-form__contents
+    -#       .show-lists__chat-main__message-form__contents__input-space
+    -#         = f.text_field :content, class: '.show-lists__chat-main__message-form__contents__input-space', placeholder: 'type a message'
+    -#         .show-lists__chat-main__message-form__contents__input-space__label
+    -#           = f.label :image, class: '.show-lists__chat-main__message-form__contents__input-space__label' do
+    -#             =icon('far', 'image')
+    -#             .show-lists__chat-main__message-form__contents__input-space__label__hidden
+    -#               = f.file_field :image, class: '.show-lists__chat-main__message-form__contents__input-space__label__hidden'
+    -#       .show-lists__chat-main__message-form__contents__btn-box
+    -#         = f.submit 'Send', class: '.show-lists__chat-main__message-form__contents__input-space__btn-box__Send'
+.chat-main
+  .chat-main__message-form
+    = form_with model: [@group, @message], html: {class: "chat-main__message-form__Form"}, local: true do |f|
+      .chat-main__message-form__Form__contents
+        = f.text_field :content, class: 'chat-main__message-form__Form__contents__message', placeholder: 'type a message'
+        .chat-main__message-form__Form__contents__imgbox
+          = f.label :image, class: 'chat-main__message-form__Form__contents__imgbox__label' do
+            = icon('far', 'image', class: 'chat-main__message-form__Form__contents__imgbox__label__icon')
+            = f.file_field :image, class: 'chat-main__message-form__Form__contents__imgbox__label__file-field'
+      = f.submit 'Send', class: 'chat-main__message-form__Form__btn-send'
