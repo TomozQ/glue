@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user).order("created_at DESC")
     @informs = Inform.where(group_id: params[:group_id])
+    @models = (@group.messages + @informs).sort_by{|model| model.created_at}
   end
 
   def create
