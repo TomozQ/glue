@@ -36,7 +36,7 @@
                   = image_tag model.image.url, class: '.show-lists__chat-main__message-lists__contents__content__left__text__img' if model.image.present?
               .show-lists__chat-main__message-lists__contents__content__right
                 .show-lists__chat-main__message-lists__contents__content__right__time-stamp
-                  = model.created_at
+                  = model.created_at.strftime("%Y年%m月%d日 %H時%M分")
           - else
             .show-lists__chat-main__message-lists__contents__content1
               .show-lists__chat-main__message-lists__contents__content1__left
@@ -48,7 +48,7 @@
                   = model.content
               .show-lists__chat-main__message-lists__contents__content1__right
                 .show-lists__chat-main__message-lists__contents__content1__right__time-stamp
-                  = model.created_at
+                  = model.created_at.strftime("%Y年%m月%d日 %H時%M分")
         
     
 .chat-main

@@ -6,18 +6,18 @@
   background-image: image-url("//public/backgrond-images/3413354_s.jpg");
   &__main{
     width: 400px;
-    height: 200px;
+    height: 180px;
     background-image: image-url("//public/backgrond-images/create_inform_background.jpg");
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px black;
     display: flex;
     justify-content: center;
     align-items: center;
     &__add-form{
-
       
       &__contents{
-
+        
         &__input-space{
           
           input{
