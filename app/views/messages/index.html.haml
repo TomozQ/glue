@@ -25,30 +25,30 @@
   .show-lists__chat-main
     .show-lists__chat-main__message-lists
       .show-lists__chat-main__message-lists__contents
-        - @group.messages.each do |message|
-          .show-lists__chat-main__message-lists__contents__content{data: {message: {id: message.id}}}
-            .show-lists__chat-main__message-lists__contents__content__left
-              .show-lists__chat-main__message-lists__contents__content__left__name
-                = message.user.name
-              .show-lists__chat-main__message-lists__contents__content__left__text
-                = message.content
-                = image_tag message.image.url, class: '.show-lists__chat-main__message-lists__contents__content__left__text__img' if message.image.present?
-            .show-lists__chat-main__message-lists__contents__content__right
-              .show-lists__chat-main__message-lists__contents__content__right__time-stamp
-                = message.created_at
-        -if @informs
-          - @informs.each do |inform|
+        - @models.each do |model|
+          - if model.is_a?(Message)
+            .show-lists__chat-main__message-lists__contents__content{data: {message: {id: model.id}}}
+              .show-lists__chat-main__message-lists__contents__content__left
+                .show-lists__chat-main__message-lists__contents__content__left__name
+                  = model.user.name
+                .show-lists__chat-main__message-lists__contents__content__left__text
+                  = model.content
+                  = image_tag model.image.url, class: '.show-lists__chat-main__message-lists__contents__content__left__text__img' if model.image.present?
+              .show-lists__chat-main__message-lists__contents__content__right
+                .show-lists__chat-main__message-lists__contents__content__right__time-stamp
+                  = model.created_at.strftime("%Y年%m月%d日 %H時%M分")
+          - else
             .show-lists__chat-main__message-lists__contents__content1
               .show-lists__chat-main__message-lists__contents__content1__left
                 .show-lists__chat-main__message-lists__contents__content1__left__name
-                  = inform.user.name
+                  = model.user.name
                 .show-lists__chat-main__message-lists__contents__content1__left__store-name
-                  = inform.store.name
+                  = model.store.name
                 .show-lists__chat-main__message-lists__contents__content1__left__text
-                  = inform.content
+                  = model.content
               .show-lists__chat-main__message-lists__contents__content1__right
                 .show-lists__chat-main__message-lists__contents__content1__right__time-stamp
-                  = inform.created_at
+                  = model.created_at.strftime("%Y年%m月%d日 %H時%M分")
         
     
 .chat-main
