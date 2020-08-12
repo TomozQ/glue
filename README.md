@@ -1,6 +1,6 @@
 # README
 
-# Glue
+# アプリ名: Glue
 ## 🌐 App URL
 
 ### **https://glue1.herokuapp.com/**  
@@ -44,4 +44,14 @@
 ## 実装予定
 ### ユーザーごとにアイコンを設定できるようにする。
 
-## DB設計
+# DB設計
+## groupテーブル
+|column|Type|Options|
+|name|String|presence: true|
+
+### Association
+- has_many :group_users
+- has_many :users, through: :group_users
+- has_many :messages
+- has_many :stores
+- has_many :inform
