@@ -10,5 +10,5 @@
 
 ## 📦 Features
 <p align="center">
-  <img src="/public/README-images/スクリーンショット 2020-08-12 11.51.38.png" width=40%>
+  <img src="/public/README-images/スクリーンショット 2020-08-12 11.51.38.png" width=80%>
 </p>
