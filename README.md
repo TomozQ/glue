@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 🌐 App URL
 
-Things you may want to cover:
+### **https://glue1.herokuapp.com/**  
 
-* Ruby version
+## テスト用アカウント
+### email: test@com
+### password: 11111111
 
-* System dependencies
+## 📦 Features
+<p align="center">
+  <img src="/public/README-images/スクリーンショット 2020-08-12 12.17.41.png" width=80%>
+</p>
 
-* Configuration
+### グループでチャットを行えます。
+### 場所についてコメントがされた場合にはチャット画面に表示されます。
 
-* Database creation
+<p align="center">
+  <img src="/public/README-images/スクリーンショット 2020-08-12 12.17.59.png" width=80%>
+</p>
 
-* Database initialization
+### グループごとに場所を登録しておけます。
 
-* How to run the test suite
+<p align="center">
+  <img src="/public/README-images/スクリーンショット 2020-08-12 12.18.11.png" width=80%>
+</p>
 
-* Services (job queues, cache servers, search engines, etc.)
+### こちらの画面で場所の追加を行えます。
 
-* Deployment instructions
+<p align="center">
+  <img src="/public/README-images/スクリーンショット 2020-08-12 11.51.55.png" width=80%>
+</p>
 
-* ...
+### 場所についてコメントができます。
