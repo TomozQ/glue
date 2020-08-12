@@ -56,3 +56,63 @@
 - has_many :messages
 - has_many :stores
 - has_many :inform
+
+## userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, default: ""|
+|encrypted_password|string|null: false, default: ""|
+
+### Association
+- has_many :group_users
+- has_many :groups, through: :group_users 
+- has_many :messages
+- has_many :stores
+- has_many :informs
+
+## group_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|interger|foreign_key: true|
+|user_id|interger|foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## messageテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|presence: true, unless: :image?|
+|image|string| |
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## storeテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|presence: true|
+|group_id|interger|foreign_key: true|
+
+### Association
+- belongs_to :group
+- has_many :users
+- has_many :informs
+
+## informテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|presence: true|
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
+|store_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :store
+- belongs_to :group
