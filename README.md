@@ -46,8 +46,9 @@
 
 # DB設計
 ## groupテーブル
-|column|Type|Options|
-|name|String|presence: true|
+|Column|Type|Options|
+|------|----|-------|
+|name|string|presence: true|
 
 ### Association
 - has_many :group_users
