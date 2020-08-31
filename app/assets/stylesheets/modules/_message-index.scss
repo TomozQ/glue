@@ -36,6 +36,9 @@
       }
     }
   }
+  &__side-bar::-webkit-scrollbar{
+    display: none;
+  }
   &__chat-main{
     height: calc(100vh - 100px);
     width: calc(100vw - 300px);
@@ -144,6 +147,9 @@
       }
       
     }
+    &__message-lists::-webkit-scrollbar {
+      display:none;
+  }
     
   }
   

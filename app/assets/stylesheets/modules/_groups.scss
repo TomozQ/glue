@@ -84,6 +84,9 @@
       
     }
   }
+  &__contents::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .show-lists{
