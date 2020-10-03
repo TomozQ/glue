@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .head{
   background-color: #FF0066;
   width: 100vw;
@@ -51,15 +52,15 @@
   justify-content: center;
   align-items: center;
   background-image: image-url("//public/backgrond-images/315222_s.jpg");
-  background-size: cover;
-  height: calc(100vh - 100px);
+  background-size: 100% auto;
+  height: 100%;
+  object-fit: cover;
   &__contents{
-    background-color: #CCCCCC;
     width: 600px;
     height: 650px;
     overflow: scroll;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 41px;
     background: rgba(45,45,45, 0.4);
     border-radius: 4px;
     &__content{
@@ -84,9 +85,9 @@
       
     }
   }
-  &__contents::-webkit-scrollbar{
-    display: none;
-  }
+  // &__contents::-webkit-scrollbar{
+  //   display: none;
+  // }
 }
 
 .show-lists{

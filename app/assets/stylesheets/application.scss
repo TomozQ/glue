@@ -8,3 +8,6 @@
 @import "modules/stores";
 @import "modules/inform";
 @import "modules/message-index";
+*::-webkit-scrollbar {
+  display:none;
+}
